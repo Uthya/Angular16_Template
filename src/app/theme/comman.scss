@@ -1,0 +1,30 @@
+
+$text-color-dark:#000;
+$text-color-lite:#FFF;
+$primary-color:#c2185b;
+$primary-lite:#f26a8d;
+$text-hover:rgba(255, 255, 255, 0.5);
+$secondary-color:#db3069;
+$lite-color:#f2f5ea;
+$sidebar-bg:#303030;
+
+.top-header{
+    background: $primary-color;
+    color: $text-color-lite;
+    position: fixed;
+    width: 100%;
+    height: 4em;
+    top:0;
+    left:0;
+}
+.left-sidebar{
+    position: relative;
+    display: block;
+    background: $sidebar-bg;
+    height: calc(100vh - 64px);
+    max-width: 14.5rem;
+    margin-top: 4rem;
+    z-index: 1; 
+    overflow-y: auto;
+    color: $lite-color;
+}

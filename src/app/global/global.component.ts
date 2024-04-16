@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
+import { SidebarModel } from '../app.model';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+@Injectable()
+export class GlobalComponent implements OnInit  {
 
-@Component({
-  selector: 'app-global',
-  templateUrl: './global.component.html',
-  styleUrls: ['./global.component.css']
-})
-export class GlobalComponent {
+  constructor(public http:HttpClient){
+  }
+  
+  ngOnInit(): void {
+  }
+
 
 }

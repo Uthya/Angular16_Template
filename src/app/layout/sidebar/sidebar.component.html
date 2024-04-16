@@ -1,1 +1,27 @@
-<p>sidebar works!</p>
+<div class="left-sidebar">
+  <div class="sidebar-content">
+    <div class="menu-items" *ngFor="let menu of menuList; let i = index">
+      <div *ngIf="menu.submenu.length" class="menu-lists">
+        <a (click)="menuToggle(i)">
+          <span class="menuicon"><i [class]="menu.icon"></i></span>
+          <span class="menutitle">{{ menu.title }}</span>
+          <span class="submenu-arrow"  [ngClass]="{ 'rotate-arrow': menu.menu }"><i class="fa-solid fa-angle-right"></i></span>
+        </a>
+      </div>
+      <div *ngIf="!menu.submenu.length" class="menu-lists">
+        <a [routerLink]="menu.routerlink">
+          <span class="menuicon"><i [class]="menu.icon"></i></span>
+          <span>{{ menu.title }}</span>
+        </a>
+      </div>
+
+      <div class="sub-menu" [ngClass]="{ 'show-menu': menu.menu }">
+        <ul *ngFor="let menu of menuList[i].submenu">
+          <li>
+            <a>{{ menu.childmenu}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

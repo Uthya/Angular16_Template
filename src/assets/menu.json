@@ -1,0 +1,103 @@
+[
+    {
+      "title": "About",
+      "routerlink": "/about",
+      "menu": false,
+      "icon":"fa-regular fa-address-card",
+      "submenu":[]
+    },
+    {
+      "title": "AngularJS SPA",
+      "routerlink": "/angularjs-spa",
+      "menu": false,
+      "icon":"fa-brands fa-angular",
+      "submenu": []
+    },
+    {
+      "title": "Codepens",
+      "routerlink": "",
+      "menu": false,
+      "icon":"fa-brands fa-codepen",
+      "submenu": [
+        {
+          "childmenu": "Link 1",
+          "routerlink": "https://codepen.io/UX_Dev/live/5c88e99d0e9a03834dc2d113c24f9daa"
+        },
+        {
+          "childmenu": "Link 2",
+          "routerlink": "https://codepen.io/UX_Dev/pen/LmxqKa"
+        },
+        {
+          "childmenu": "Link 3",
+          "routerlink": "https://codepen.io/UX_Dev/pen/yzejjQ"
+        },
+        {
+          "childmenu": "Link 4",
+          "routerlink": "https://codepen.io/UX_Dev/pen/xoLQrY"
+        },
+        {
+          "childmenu": "Link 5",
+          "routerlink": "https://codepen.io/UX_Dev/pen/2788684ea795e215e9dff54bd5abc66b"
+        }
+      ]
+    },
+    {
+      "title": "Navigation",
+      "routerlink": "",
+      "menu": false,
+      "icon":"fa-regular fa-compass",
+      "submenu": [
+        {
+          "childmenu": "Pure CSS Menu",
+          "routerlink": "https://codepen.io/UX_Dev/pen/VMwxmQ"
+        },
+        {
+          "childmenu": "User Selection",
+          "routerlink": "https://codepen.io/UX_Dev/live/ZXYLyV"
+        },
+        {
+          "childmenu": "In Page Navigation",
+          "routerlink": "https://codepen.io/UX_Dev/pen/JjogojN"
+        },
+        {
+          "childmenu": "Progress Navigation Bar",
+          "routerlink": "https://codepen.io/UX_Dev/pen/xXOapm"
+        }
+      ]
+    },
+    {
+      "title": "Angular",
+      "routerlink": "",
+      "menu": false,
+      "icon":"fa-brands fa-angular",
+      "submenu": [
+        {
+          "childmenu": "Nested Routing",
+          "routerlink": "https://stackblitz.com/edit/angular-8-nested-routing"
+        },
+        {
+          "childmenu": "Modular Routing",
+          "routerlink": "https://stackblitz.com/edit/module-to-module-routing"
+        },
+        {
+          "childmenu": "JSON Line Chart",
+          "routerlink": "https://stackblitz.com/edit/line-chart-component-json"
+        }
+      ]
+    },
+    {
+        "title": "Settings",
+        "routerlink": "#",
+        "menu": false,
+        "icon":"fa-solid fa-gear",
+        "submenu": []
+      },
+      {
+        "title": "Payment",
+        "routerlink": "#",
+        "menu": false,
+        "icon":"fa-solid fa-money-check-dollar",
+        "submenu": []
+      }
+  ]
+  
