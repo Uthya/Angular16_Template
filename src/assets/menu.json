@@ -1,13 +1,13 @@
 [
     {
       "title": "About",
-      "routerlink": "/about",
+      "routerlink": "/home",
       "menu": false,
       "icon":"fa-regular fa-address-card",
       "submenu":[]
     },
     {
-      "title": "AngularJS SPA",
+      "title": "AngularJS",
       "routerlink": "/angularjs-spa",
       "menu": false,
       "icon":"fa-brands fa-angular",
@@ -87,7 +87,7 @@
     },
     {
         "title": "Settings",
-        "routerlink": "#",
+        "routerlink": "/settings",
         "menu": false,
         "icon":"fa-solid fa-gear",
         "submenu": []

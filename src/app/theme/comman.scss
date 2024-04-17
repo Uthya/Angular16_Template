@@ -1,30 +1,69 @@
+$text-color-dark: #000;
+$text-color-white: #fff;
+$primary-color: #c2185b;
+$primary-lite: #f26a8d;
+$text-hover: rgba(255, 255, 255, 0.5);
+$secondary-color: #db3069;
+$lite-color: #f2f5ea;
+$sidebar-bg: #424242;
 
-$text-color-dark:#000;
-$text-color-lite:#FFF;
-$primary-color:#c2185b;
-$primary-lite:#f26a8d;
-$text-hover:rgba(255, 255, 255, 0.5);
-$secondary-color:#db3069;
-$lite-color:#f2f5ea;
-$sidebar-bg:#303030;
 
-.top-header{
-    background: $primary-color;
-    color: $text-color-lite;
-    position: fixed;
-    width: 100%;
-    height: 4em;
-    top:0;
-    left:0;
+.left-sidebar::-webkit-scrollbar {
+    width: 0.3rem;
 }
-.left-sidebar{
-    position: relative;
-    display: block;
-    background: $sidebar-bg;
-    height: calc(100vh - 64px);
-    max-width: 14.5rem;
+ 
+.left-sidebar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $text-hover; 
+    border-radius: 10px;
+}
+   
+.left-sidebar::-webkit-scrollbar-thumb {
+    background: $secondary-color; 
+    border-radius: 5px;
+}
+  
+.top-header {
+  background: $primary-color;
+  color: $text-color-white;
+  position: fixed;
+  width: 100%;
+  height: 4em;
+  top: 0;
+  left: 0;
+}
+.left-sidebar {
+  position: fixed;
+  display: block;
+  background: $sidebar-bg;
+  height: calc(103vh - 64px);
+  max-width: 14rem;
+  margin-top: 4rem;
+  z-index: 1;
+  overflow-y: auto;
+  color: $lite-color;
+  box-shadow: none;
+  border-right: 1px solid rgba(194, 166, 166, 0.12);
+  transition: all 0.3s;
+}
+.page-content{
+    width: 100%;
     margin-top: 4rem;
-    z-index: 1; 
-    overflow-y: auto;
-    color: $lite-color;
+    padding: 0.6rem;
+    transition: all 0.3s;
+}
+
+@media only screen and (min-width: 768px) {
+.left-sidebar::-webkit-scrollbar {
+    width: 0.3rem;
+}
+ 
+.left-sidebar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $text-hover; 
+    border-radius: 10px;
+}
+   
+.left-sidebar::-webkit-scrollbar-thumb {
+    background: $secondary-color; 
+    border-radius: 5px;
+}
 }

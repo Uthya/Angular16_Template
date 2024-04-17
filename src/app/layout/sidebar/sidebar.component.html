@@ -1,24 +1,31 @@
-<div class="left-sidebar">
+
+<div>
+  <app-header (emitoSidebar)="EmitFromHeaderComponent($event)"></app-header>
+</div>
+<div class="left-sidebar" [style.width]="this.collapseMenu.contentWidth">
   <div class="sidebar-content">
     <div class="menu-items" *ngFor="let menu of menuList; let i = index">
       <div *ngIf="menu.submenu.length" class="menu-lists">
         <a (click)="menuToggle(i)">
-          <span class="menuicon"><i [class]="menu.icon"></i></span>
-          <span class="menutitle">{{ menu.title }}</span>
-          <span class="submenu-arrow"  [ngClass]="{ 'rotate-arrow': menu.menu }"><i class="fa-solid fa-angle-right"></i></span>
+          <span class="menuicon" [ngClass]="{'margin_icon': collapseMenu.isCollapsed}" ><i [class]="menu.icon"></i></span>
+          <span class="menutitle" *ngIf="!collapseMenu.isCollapsed">{{ menu.title }}</span>
+          <span class="submenu-arrow" [ngClass]="{'rotate-arrow': menu.menu }"
+          *ngIf="!collapseMenu.isCollapsed"><i class="fa-solid fa-angle-right"></i
+          ></span>
         </a>
       </div>
       <div *ngIf="!menu.submenu.length" class="menu-lists">
         <a [routerLink]="menu.routerlink">
-          <span class="menuicon"><i [class]="menu.icon"></i></span>
-          <span>{{ menu.title }}</span>
+          <span class="menuicon" [ngClass]="{'margin_icon': collapseMenu.isCollapsed}">
+          <i [class]="menu.icon"></i></span>
+          <span class="menutitle" *ngIf="!collapseMenu.isCollapsed">{{ menu.title }}</span>
         </a>
       </div>
 
-      <div class="sub-menu" [ngClass]="{ 'show-menu': menu.menu }">
+      <div class="sub-menu" [ngClass]="{'show-menu': menu.menu}" *ngIf="!collapseMenu.isCollapsed">
         <ul *ngFor="let menu of menuList[i].submenu">
           <li>
-            <a>{{ menu.childmenu}}</a>
+            <a [routerLink]="menu.routerlink">{{ menu.childmenu }}</a>
           </li>
         </ul>
       </div>
